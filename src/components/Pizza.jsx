@@ -1,16 +1,14 @@
-import pizzaData from "../data.js";
+import "./Pizza.css";
 
-export default function Pizza() {
+export default function Pizza(props) {
+  const { pizza } = props;
+
   return (
-    <div>
-      {pizzaData.map((pizza, index) => (
-        <div key={index}>
-          <h1>{pizza.name}</h1>
-          <p>{pizza.ingredients}</p>
-          <p>Price: ${pizza.price}</p>
-          <img src={pizza.photoName} alt={pizza.name} width={"200px"} />
-        </div>
-      ))}
+    <div className="Pizza">
+      <img src={pizza.photoName} alt={pizza.name} width={"233px"} />
+      <h1>{pizza.name}</h1>
+      <p>{pizza.ingredients}</p>
+      <p>Price: ${pizza.price}</p>
     </div>
   );
 }

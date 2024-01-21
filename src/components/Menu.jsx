@@ -3,10 +3,10 @@ import pizzaData from "../data.js";
 
 export default function Menu() {
   return (
-    <div className="Menu">
+    <ul className="Menu">
       {pizzaData.map((pizza) => (
-        <Pizza pizza={pizza} />
+        <Pizza pizza={pizza} key={pizza.name} />
       ))}
-    </div>
+    </ul>
   );
 }

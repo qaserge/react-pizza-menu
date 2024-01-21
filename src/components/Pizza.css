@@ -20,9 +20,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    list-style: none;
   }
 
   .Pizza {
     width: calc(33% - 20px);
   }
+}
+
+.Pizza.sold-out {
+  color: #888;
+}
+
+.Pizza.sold-out img {
+  filter: grayscale();
+  opacity: 0.8;
 }
